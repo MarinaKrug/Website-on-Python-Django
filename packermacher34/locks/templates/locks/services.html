@@ -1,0 +1,14 @@
+{% extends 'locks/base.html' %}
+{% block content %}
+
+<div class="marg">
+<div class="col-7">
+<ol class="rounded">
+{% for p in price %}
+{% csrf_token %}
+<li>{{ p.cat }}_ _ _ _ _ _ _ _ _ _ _ _ _ _  <em>{{ p.price }}</em></li>
+{% endfor %}
+</ol>
+</div>
+</div>
+{% endblock content %}

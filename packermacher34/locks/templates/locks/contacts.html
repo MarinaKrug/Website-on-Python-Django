@@ -1,0 +1,27 @@
+{% extends 'locks/base.html' %}
+
+{% block content %}
+<div class="rounded">
+    <p>
+        Заполните заявку и я перезвоню Вам в течении 15 минут...
+    </p>
+    <p>
+
+    </p>
+</div>
+<div class="marg form-group col-7">
+
+<form class="rounded" action="{% url 'show_contacts' %}" method='post'>
+{% csrf_token %}
+
+    <div class="form-error">{{ form.non_field_errors }}</div>
+
+{% for f in form%}
+    <p><label class="form-control" for="{{ f.id_for_label }}">{{f.label}}:</label>{{ f }}</p>
+    <div class="form-error">{{ f.errors }}</div>
+{% endfor %}
+
+    <button type="submit" class="btn-block call">ОСТАВИТЬ  ЗАЯВКУ</button>
+</form>
+</div>
+{% endblock content%}

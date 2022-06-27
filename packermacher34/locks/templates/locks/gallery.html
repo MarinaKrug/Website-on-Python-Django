@@ -1,0 +1,31 @@
+{% extends 'locks/base.html' %}
+{% load categories_tags %}
+
+{% block sidebar %}
+<td valign="top" class="left-chapters">
+
+	<ul id="leftchapters">
+{% if cat_selected == 0 %}
+		<li class="selected"><b>Все категории</b></li>
+{% else %}
+		<li><a href="{% url 'show_gallery' %}"><b>Все категории</b></a></li>
+{% endif %}
+
+{%  show_categories %}
+
+	</ul>
+</td>
+{% endblock sidebar%}
+
+{% block content %}
+<div class="layout">
+    {% for photo in gallery %}
+    <div class="c1">
+        <div class="block">
+          <img class="tpicture"alt="пшш пшшш ты где???"  src="{{ photo.photo.url }}" width=150px height=170px>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
+{% endblock content %}

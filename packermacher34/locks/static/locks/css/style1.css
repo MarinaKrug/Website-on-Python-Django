@@ -1,0 +1,329 @@
+
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+body {
+     background-image: url(https://html5book.ru/wp-content/uploads/2017/04/aleksandar-radovanovic-13513.jpg);
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     margin-right:30px;
+}
+
+
+/* box-shadow: добавляет элементу эффект тени*/
+.top-menu {
+  position:fixed;
+  top: 0;
+  background: rgba(255,255,255,.8);
+  width: 100%;
+  box-shadow: 3px 0 7px rgba(0,0,0,.7);
+  padding: 10px;
+}
+
+.top-menu:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.navbar-logo {
+    display: inline-block;
+    float: left;
+}
+
+.menu-main {
+  list-style: none;
+  margin: auto;
+  padding: 10px;
+  float: right;
+}
+.menu-main li {
+    display: inline-block;
+    font-style: italic;
+}
+
+
+.menu-main a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  line-height: 61px;
+  padding-left: 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: Verdana, Geneva, Arial, Helvetica;
+  font-weight: bold;
+  color: rgba(191, 88, 89, 0.9);
+  transition:.3s linear;
+}
+
+.menu-main a:before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background: #2139e6;
+  position: absolute;
+  left: 50%;
+  transform: rotate(45deg) translateX(6.5px);
+  opacity: 0;
+  transition: .3s linear;
+}
+
+
+.menu-main a:hover:before {opacity: 1;}
+
+.menu-main a {padding: 0 10px;}
+
+.menu-main a:before {transform: rotate(45deg) translateX(-6px);}
+}
+
+.menu-main li {
+    margin-right: 25px;
+}
+
+
+.content-text {
+	margin: 30px 0 0 30px;
+	color: #000;
+	font-size: 20px;
+	font-family: Yandex Sans Display Light;
+}
+
+.table-page {
+    border-spacing: none;
+    border: none;
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+}
+
+.table-page tr {height: 100%;}
+
+
+.left-chapters td {
+    border-spacing: none;
+    border: none;
+}
+
+.left-chapters {
+    border: none;
+	min-height: 100%;
+	padding-right: 25px;
+	padding-top: 30px;
+}
+
+
+.right-picture {
+    float: right;
+    margin: 5px 5px 10px 20px;
+    border-radius: 35px;
+    border: 5px #cfc solid;
+    box-shadow: 0 0 10px #444;
+    }
+
+
+#left-picture {
+    float: left;
+    margin: 5px 5px 10px 20px;
+    border-radius: 10px;
+    border: 3px #cfc solid;
+    box-shadow: 0 0 10px #444;
+    width:35%;
+    }
+
+.about {
+    font-family: Montserrat, Helvetica, Verdana, Geneva, Arial;
+    font-size: 20px;
+    font-style: Italic;
+    text-decoration-line: none;
+    margin-bottom: 50px;
+    color: #630e63;
+    }
+
+.tpicture {
+    border-radius: 30px;
+    border: 5px #cfc solid;
+    box-shadow: 0 0 10px #444;
+    }
+.logpicture {
+    border-radius: 20px;
+    border: 2px #cfc solid;
+    box-shadow: 0 0 10px #444;
+}
+.spicture {
+    border-radius: 35px;
+    border: 5px #cfc solid;
+    box-shadow: 0 0 10px #444;
+    }
+#call {
+    text-decoration: none;
+    color: white;
+}
+#call2 {
+    text-decoration: none;
+    color: white;
+}
+.call {
+  appearance: none;
+  background: #4676D7;
+  color: #FFFFFF;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 35px;
+  border: 5px #cfc solid;
+  box-shadow: 0 0 10px #444;
+}
+.block {
+  margin: 8px 0;
+  padding: 22px;
+  box-sizing: border-box;
+  color: #fff;
+  font: 15px sans-serif;
+  text-align: center;
+  background: rgba(255,25,255, 0.2);
+  border-radius: 35px;
+}
+
+
+
+.c1 {
+  padding: 0 2px;
+  box-sizing: border-box;
+  transition: 0.8s; /* Время эффекта при :hover */
+}
+
+.c1:hover {
+    transform: scale(2.1); /* Увеличиваем масштаб при наведении мышью*/
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#footer {
+	box-sizing: border-box;
+	padding: 5px;
+	color: #800080;
+	font-size: 14px;
+	font-family: Helvetica, Verdana, Geneva, Arial;
+	text-align: left;
+	valign: bottom;
+	overflow: hidden;
+	margin-top: 80px;
+}
+
+.rounded {
+margin-top: 55px;
+counter-reset: li;
+list-style: none;
+font: 17px "Trebuchet MS", "Lucida Sans";
+padding: 0;
+text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+
+.rounded li {
+position: relative;
+display: block;
+padding: .4em .4em .4em 2em;
+margin: .5em 0;
+background: #DAD2CA;
+color: #444;
+text-decoration: none;
+border-radius: .3em;
+transition: .3s ease-out;
+}
+.rounded li:hover {background: #E9E4E0;}
+.rounded li:hover:before {transform: rotate(360deg);}
+.rounded li:before {
+content: counter(li);
+counter-increment: li;
+position: absolute;
+left: -1.3em;
+top: 50%;
+margin-top: -1.3em;
+background: #8FD4C1;
+height: 2em;
+width: 2em;
+line-height: 2em;
+border: .3em solid white;
+text-align: center;
+font-weight: bold;
+border-radius: 2em;
+transition: all .3s ease-out;
+}
+
+
+.form-input {
+    width: 300px;
+    font-size: 16px;
+
+}
+
+.form-label {
+    display: inline-block;
+    min-width: 150px;
+    vertical-align: top;
+    font: 17px "Trebuchet MS", "Lucida Sans";
+}
+
+.form-error ul {
+    list-style: none;
+    padding: 0;
+    color: #CC0000;
+}
+
+.form-button {
+    min-width: 200px;
+    font-size: 16px;
+}
+
+
+
+.left-chapters {
+	margin: 0;
+	background:rgba(255,255,255,.3);
+	border-right: 1px solid #ccc;
+	min-height: 100%;
+}
+.left-chapters ul {
+	width: 230px;
+	min-height: 100%;
+	margin: 0;
+	padding: 20px 10px 10px 20px;
+	list-style: none;
+	font-size: 20px;
+	font-style: Italic;
+}
+.left-chapters ul li {
+	margin: 30px 0 0 0;
+	color: #999;
+	font-style: Italic;
+}
+.left-chapters ul li.selected {color: #0059b2; }
+.left-chapters ul li a {
+	color: rgb(191, 88, 89);
+	font: Italic;
+	text-decoration: none;
+}
+.left-chapters ul li a:hover { color: #2199e6; }
+.left-chapters ul li.share {margin: 60px 0 0 0;}
+.left-chapters ul li.share p {margin: 30px 0 30px 0;}
+.left-chapters ul li.share a {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	margin: 0 20px 0 0;
+}
+.left-chapters ul li.share a.share-yt {
+	width: 100%;
+	height: 30px;
+	background: url('../images/share_yt.png') no-repeat 0 0
+}
+.left-chapters ul li.share a.share-yt:hover {
+	width: 100%;
+	height: 30px;
+	background: url('../images/share_yt.png') no-repeat 0 -30px
+}
+
+.selected {color: #fdc073; border-bottom: 1px solid #fdc073;}

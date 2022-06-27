@@ -1,0 +1,24 @@
+{% extends 'locks/base.html' %}
+
+{% block content %}
+
+<div class="col-7">
+<ol class="rounded">
+{% for s in sale %}
+{% csrf_token %}
+<li>Дата: {{s.time_update|date:"d-m-Y"}}
+	{% if s.photo %}
+		<img id="left-picture" src="{{ s.photo.url }}">
+	{% endif %}
+<p>{{s.title}}</p>
+{% autoescape off %}
+{{s.content|linebreaks|truncatewords:50}}
+{% endautoescape %}
+</li>
+{% endfor %}
+</ol>
+</div>
+
+
+{% endblock content %}
+
